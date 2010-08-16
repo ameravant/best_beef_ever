@@ -1,0 +1,23 @@
+#wrapper-outer { background: url('/plugin_assets/bestbeefever/images/grass-tile.jpg') center; }
+#wrapper-middle { background: url('/plugin_assets/bestbeefever/images/background-top.jpg') no-repeat center top; }
+#title { display: block; position: absolute; margin-left: 100px; }
+#menu-outer { background: none; }
+.inline-logo #menu-inner li { margin-top: 100px; }
+#menu-inner li a { color: #2c1f12; font-family: Georgia, "Times New Roman", Serif; }
+#menu-inner li.selected { background: #82b200 url() !important; }
+#menu-inner li.selected a { background: none !important; }
+#menu-inner li:hover { background: none; }
+#menu-inner li a:hover {background: none; color: #8E7339; }
+.submenu-outer { width: 900px; margin: 0 auto; background: none; margin-top: -30px; border-bottom: none; min-height: 15px; }
+.submenu-middle { width: 766px; margin-left: 127px; background: #82b200; height: 35px; box-shadow: 0 3px 8px rgba(0,0,0,.68); -moz-box-shadow: 0 3px 8px rgba(0,0,0,.68); -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.68); }
+.submenu-inner { line-height: 35px; }
+.submenu-inner li a { line-height: 35px; font-family: Georgia, "Times New Roman", Serif; }
+#header-outer { padding: 20px 0 0 0; }
+#pre-content-outer, #content-outer, #footer-outer { background: none; }
+#pre-content-outer { border-top: none; }
+#wide-features { background: #a3c9ea !important; margin-bottom: -20px; margin: 20px auto -20px !important; box-shadow: 0 3px 8px rgba(0,0,0,.68); -moz-box-shadow: 0 3px 8px rgba(0,0,0,.68); -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.68); }
+#pre-content { min-height: 30px; line-height: 30px; }
+#content-middle { background: #f8ffa7; border: 5px solid #a3c9ea; box-shadow: 0 3px 8px rgba(0,0,0,.68); -moz-box-shadow: 0 3px 8px rgba(0,0,0,.68); -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.68); }
+#footer-outer { height: 179px; background: url('/plugin_assets/bestbeefever/images/footer-bg.jpg') repeat-x center top; margin: 0 -15px -20px; }
+#footer-inner { width: inherit; }
+#crumb { padding: 0 0 10px 0; }
