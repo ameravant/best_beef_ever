@@ -90,6 +90,7 @@
     #wrapper-outer{:class => @cms_config['website']['logo_position'] == "top" ? "top-logo" : "inline-logo"}
       #wrapper-middle
         #wrapper-inner
+          #header-top
           #header-outer
             #header-middle
               #header-inner
@@ -99,18 +100,20 @@
                       = link_to "CMS Login", new_session_path, :class => 'bold green'
                       %span Give it a try!
                 #logo
-                  = link_to(image_tag("/plugin_assets/best_beef_ever/images/logo.png", :alt => @cms_config['website']['name'], :title => @cms_config['website']['name']), root_path)
-                = link_to(image_tag("/plugin_assets/best_beef_ever/images/site-title.png", :alt => "Best Beef Ever"), "/", :id => "title")
+                  = link_to(image_tag("/plugin_assets/best_beef_ever/images/logo-2.png", :alt => @cms_config['website']['name'], :title => @cms_config['website']['name']), root_path)
+                = link_to(image_tag("/plugin_assets/best_beef_ever/images/site-title-2.gif", :alt => "Best Beef Ever"), "/", :id => "title")
+                = image_tag("/plugin_assets/best_beef_ever/images/header-right.gif", :alt => "Local Grassfed Beef", :id => "header-right")
                 - if @admin
                   .admin-clear
-              - if !@settings.header_right_file_name.blank? and !@admin
-                #header-right
-                  = link_to(image_tag(@settings.header_right(:original), :alt => @cms_config['website']['name'], :title => @cms_config['website']['name']), @settings.header_right_url)
+                - if !@settings.header_right_file_name.blank? and !@admin
+                  #header-right
+                    = link_to(image_tag(@settings.header_right(:original), :alt => @cms_config['website']['name'], :title => @cms_config['website']['name']), @settings.header_right_url)
+                = render :partial => "/layouts/menu" unless @admin
+                = yield :submenu if @content_for_submenu
+                
               - if !@settings.header_text.blank?
                 = @settings.header_text
                 = #@settings.header_text.gsub(/\#{ (.{0,}?) }/m) {|x| eval($1)}
-          = render :partial => "/layouts/menu" unless @admin
-          = yield :submenu if @content_for_submenu
           = yield :banner if @content_for_banner
           = yield :wide_feature_box if @content_for_wide_feature_box
           #content-outer
